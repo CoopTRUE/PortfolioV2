@@ -11,9 +11,19 @@
 
 html {
   color-scheme: dark;
+  --color-bg: #282c33;
+  --color-gray: #abb2bf;
+  --color-primary: #007bff;
+}
+body {
+  color: white;
+  min-height: 100vh;
+  background: var(--color-bg);
+  font-family: 'Fira Code', monospace;
 }
 
-body,
 main {
   min-height: 100vh;
+  max-width: 64rem;
+  margin-inline: auto;
 }

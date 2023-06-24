@@ -1,4 +1,7 @@
 <script>
+  import Hero from './Hero.svelte'
+  import Quote from './Quote.svelte'
+  // import Link from '$lib/components/Link.svelte'
 </script>
 
 <svelte:head>
@@ -7,11 +10,9 @@
 </svelte:head>
 
 <main>
-  <h1>hi</h1>
+  <Hero />
+  <Quote />
 </main>
 
 <style lang="scss">
-  h1 {
-    color: green;
-  }
 </style>
