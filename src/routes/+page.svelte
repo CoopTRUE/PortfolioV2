@@ -14,6 +14,9 @@
   <Hero />
   <Quote />
   <Projects />
+  <section>
+    <p>hi</p>
+  </section>
 </main>
 
 <style lang="scss">

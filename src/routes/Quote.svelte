@@ -6,8 +6,6 @@
 <style lang="scss">
   section {
     font-size: 1.5rem;
-    display: flex;
-    flex-direction: column;
   }
   .quote {
     position: relative;
@@ -34,6 +32,7 @@
     }
   }
   .author {
+    float: right;
     display: inline;
     border: 1px solid var(--color-gray);
     border-top: none;

@@ -32,10 +32,10 @@ main {
 }
 
 section {
-  width: 100%;
   > h2 {
     font-size: 2rem;
     font-weight: 500;
+    margin-bottom: 3rem;
     &::before {
       content: '#';
       color: var(--color-primary);
@@ -46,5 +46,5 @@ section {
       color: var(--color-primary);
     }
   }
-  margin-bottom: 3rem;
+  margin-bottom: 6.25rem;
 }

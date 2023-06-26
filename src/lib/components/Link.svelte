@@ -14,6 +14,7 @@
     color: white;
     display: inline-block;
     font-weight: 500;
+    width: fit-content;
     padding: 0.5rem 1rem;
     border: 1px solid var(--color-primary);
     transition: background 0.2s ease-in-out;

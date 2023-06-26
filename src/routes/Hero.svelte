@@ -14,15 +14,18 @@
 
 <style lang="scss">
   section {
-    margin-bottom: 4rem;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-bottom: 3.75rem;
     .text {
       width: 45ch;
     }
     .headshot {
-      width: 20rem;
+      width: min(20rem, 35%);
+      aspect-ratio: 1/1;
       border-radius: 1rem;
     }
   }
