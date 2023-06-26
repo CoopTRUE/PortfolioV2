@@ -7,6 +7,11 @@ declare global {
     // interface PageData {}
     // interface Platform {}
   }
+
+  declare module '*&webp' {
+    const src: string
+    export default src
+  }
 }
 
 export {}

@@ -1,5 +1,6 @@
 <script>
   import Hero from './Hero.svelte'
+  import Projects from './Projects.svelte'
   import Quote from './Quote.svelte'
   // import Link from '$lib/components/Link.svelte'
 </script>
@@ -12,6 +13,7 @@
 <main>
   <Hero />
   <Quote />
+  <Projects />
 </main>
 
 <style lang="scss">

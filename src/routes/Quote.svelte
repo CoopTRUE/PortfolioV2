@@ -1,16 +1,15 @@
-<div class="wrapper">
+<section>
   <div class="quote">Talk is cheap. Show me the code</div>
   <div class="author">- Linus Torvalds</div>
-</div>
+</section>
 
 <style lang="scss">
-  .wrapper {
+  section {
     font-size: 1.5rem;
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
   }
   .quote {
-    display: inline-block;
     position: relative;
     font-weight: 500;
     padding: 2rem;
@@ -35,8 +34,10 @@
     }
   }
   .author {
+    display: inline;
+    border: 1px solid var(--color-gray);
+    border-top: none;
     padding: 1rem;
     font-weight: 300;
-    text-align: right;
   }
 </style>
