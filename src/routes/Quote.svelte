@@ -6,6 +6,7 @@
 <style lang="scss">
   section {
     font-size: 1.5rem;
+    margin-bottom: 4.625rem;
   }
   .quote {
     position: relative;

@@ -2,6 +2,7 @@
   import Hero from './Hero.svelte'
   import Projects from './Projects.svelte'
   import Quote from './Quote.svelte'
+  import Skills from './Skills.svelte'
   // import Link from '$lib/components/Link.svelte'
 </script>
 
@@ -14,9 +15,7 @@
   <Hero />
   <Quote />
   <Projects />
-  <section>
-    <p>hi</p>
-  </section>
+  <Skills />
 </main>
 
 <style lang="scss">
