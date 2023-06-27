@@ -30,7 +30,6 @@ const skills: Skills = {
     {
       name: 'Java',
       icon: 'java',
-      svgPorn: true,
     },
     {
       name: 'Lua',

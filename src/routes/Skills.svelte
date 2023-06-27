@@ -1,5 +1,6 @@
 <script lang="ts">
   import skills from '$lib/data/skills'
+  import dots from '$lib/svgs/skills-dots.svg'
 
   const entries = Object.entries(skills)
 </script>
@@ -7,7 +8,7 @@
 <section>
   <h2>skills</h2>
   <div class="content">
-    <div class="dots" />
+    <img src={dots} alt="" class="skills" />
     <ul class="skills">
       {#each entries as [category, skills]}
         <li class="skil-category">
@@ -29,3 +30,32 @@
     </ul>
   </div>
 </section>
+
+<style lang="scss">
+  section {
+    width: 100%;
+  }
+  .content {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+
+    ul {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+      gap: 1rem;
+      li {
+        display: grid;
+        grid-template-columns: 2rem 1fr;
+        gap: 0.5rem;
+        align-items: center;
+        img {
+          width: 2rem;
+          height: 2rem;
+          object-fit: contain;
+          object-position: center;
+        }
+      }
+    }
+  }
+</style>
