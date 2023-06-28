@@ -9,7 +9,7 @@
     <p class="description">Crafting unique and innovative website experiences for all</p>
     <Link href="https://www.google.com">Contact Me</Link>
   </div>
-  <img class="headshot" src={headshot} alt="headshot" />
+  <img class="headshot" src={headshot} alt="Headshot of Cooper Oliff" />
 </section>
 
 <style lang="scss">
