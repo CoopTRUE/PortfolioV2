@@ -7,11 +7,12 @@
   <h2>projects</h2>
   <div class="projects">
     {#each projects as { title, description, toolsUsed, link, src }}
-      <div class="project" aria-labelledby="title">
+      {@const id = title.toLowerCase().replace(' ', '-')}
+      <div class="project" aria-labelledby={id}>
         <img {src} alt={title} loading="lazy" />
         <p class="tools-used">{toolsUsed.join(', ')}</p>
         <div class="content">
-          <h3 class="title" id="title">{title}</h3>
+          <h3 class="title" {id}>{title}</h3>
           <p class="description">{description}</p>
           <Link href={link}>Live</Link>
         </div>
