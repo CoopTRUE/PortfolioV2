@@ -1,5 +1,5 @@
 <script>
-  import headshot from '$lib/images/headshot-nobg.png?width=1500&webp'
+  import headshot from '$lib/images/headshot-nobg.png?width=1500&format=webp'
   import Link from '$lib/components/Link.svelte'
 </script>
 

@@ -8,7 +8,7 @@ declare global {
     // interface Platform {}
   }
 
-  declare module '*&webp' {
+  declare module '*&format=webp' {
     const src: string
     export default src
   }

@@ -1,7 +1,7 @@
-import alphag3n from '$lib/images/projects/alphag3n.png?width=1500&webp'
-import grapeCasino from '$lib/images/projects/grape-casino.png?width=1500&webp'
-import maven from '$lib/images/projects/maven.png?width=1500&webp'
-import mvCasino from '$lib/images/projects/mv-casino.png?width=1500&webp'
+import alphag3n from '$lib/images/projects/alphag3n.png?width=1500&format=webp'
+import grapeCasino from '$lib/images/projects/grape-casino.png?width=1500&format=webp'
+import maven from '$lib/images/projects/maven.png?width=1500&format=webp'
+import mvCasino from '$lib/images/projects/mv-casino.png?width=1500&format=webp'
 
 interface Project {
   title: string
