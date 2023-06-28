@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&display=swap');
 
 *,
 *::before,
@@ -16,10 +16,15 @@ html {
   --color-primary: #007bff;
 }
 body {
-  color: white;
   min-height: 100vh;
   background: var(--color-bg);
+  color: var(--color-gray);
   font-family: 'Fira Code', monospace;
+}
+
+ul,
+ol {
+  list-style: none;
 }
 
 main {
@@ -32,7 +37,8 @@ main {
 }
 
 section {
-  > h2 {
+  h2 {
+    color: white;
     font-size: 2rem;
     font-weight: 500;
     margin-bottom: 3rem;

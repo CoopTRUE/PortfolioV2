@@ -5,6 +5,7 @@
 
 <style lang="scss">
   section {
+    color: white;
     font-size: 1.5rem;
     margin-bottom: 4.625rem;
   }
@@ -38,6 +39,5 @@
     border: 1px solid var(--color-gray);
     border-top: none;
     padding: 1rem;
-    font-weight: 300;
   }
 </style>

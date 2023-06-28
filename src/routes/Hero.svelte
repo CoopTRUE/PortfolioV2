@@ -1,5 +1,5 @@
 <script>
-  import headshot from '$lib/images/headshot.jpg?width=1500&webp'
+  import headshot from '$lib/images/headshot-nobg.png?width=1500&webp'
   import Link from '$lib/components/Link.svelte'
 </script>
 
@@ -26,19 +26,18 @@
     .headshot {
       width: min(20rem, 35%);
       aspect-ratio: 1/1;
-      border-radius: 1rem;
     }
   }
   .title {
     font-weight: 600;
     font-size: 2rem;
+    color: white;
     .colored {
       color: var(--color-primary);
     }
   }
   .description {
     margin-top: 2rem;
-    color: var(--color-gray);
     margin-bottom: 1.5rem;
   }
 </style>

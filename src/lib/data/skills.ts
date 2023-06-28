@@ -6,7 +6,7 @@ interface Skill {
 type Skills = Record<string, Skill[]>
 
 const skills: Skills = {
-  languages: [
+  Languages: [
     {
       name: 'JavaScript',
       icon: 'javascript',
@@ -30,13 +30,14 @@ const skills: Skills = {
     {
       name: 'Java',
       icon: 'java',
+      svgPorn: true,
     },
     {
       name: 'Lua',
       icon: 'lua',
     },
   ],
-  frameworks: [
+  Frameworks: [
     {
       name: 'React',
       icon: 'react',
@@ -62,7 +63,7 @@ const skills: Skills = {
       icon: 'pytorch',
     },
   ],
-  databases: [
+  Databases: [
     {
       name: 'MongoDB',
       icon: 'mongodb',
@@ -80,7 +81,7 @@ const skills: Skills = {
       icon: 'redis',
     },
   ],
-  tools: [
+  Tools: [
     {
       name: 'Git',
       icon: 'git',
@@ -98,7 +99,7 @@ const skills: Skills = {
       icon: 'figma',
     },
   ],
-  other: [
+  Other: [
     {
       name: 'Ethers.js',
       icon: 'ethers',

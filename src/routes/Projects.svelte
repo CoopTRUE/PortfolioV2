@@ -42,11 +42,10 @@
       border-bottom: solid 1px var(--color-gray);
     }
     .tools-used {
-      display: grid;
-      place-items: center;
       padding: 0.5rem;
-      color: var(--color-gray);
       border-bottom: solid 1px var(--color-gray);
+      display: flex;
+      align-items: center;
     }
     .content {
       padding: 1rem;
@@ -56,9 +55,9 @@
       .title {
         font-size: 1.5rem;
         font-weight: 500;
+        color: white;
       }
       .description {
-        color: var(--color-gray);
       }
     }
   }

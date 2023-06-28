@@ -1,4 +1,5 @@
 <script>
+  import AboutMe from './AboutMe.svelte'
   import Hero from './Hero.svelte'
   import Projects from './Projects.svelte'
   import Quote from './Quote.svelte'
@@ -16,6 +17,7 @@
   <Quote />
   <Projects />
   <Skills />
+  <AboutMe />
 </main>
 
 <style lang="scss">

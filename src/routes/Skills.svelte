@@ -8,19 +8,21 @@
 <section>
   <h2>skills</h2>
   <div class="content">
-    <img src={dots} alt="" class="skills" />
-    <ul class="skills">
+    <img src={dots} alt="" class="dots" />
+    <ul class="skill-categories">
       {#each entries as [category, skills]}
-        <li class="skil-category">
-          <h3 class="category">{category}</h3>
-          <ul>
+        <li class="category">
+          <h3 class="name">{category}</h3>
+          <ul class="skills">
             {#each skills as { name, icon, svgPorn }}
-              <li>
-                {#if svgPorn}
-                  <img src="https://cdn.svgporn.com/logos/{icon}.svg" alt={name} loading="lazy" />
-                {:else}
-                  <img src="https://cdn.simpleicons.org/{icon}" alt={name} loading="lazy" />
-                {/if}
+              <li class="skill">
+                <div class="img-container">
+                  {#if svgPorn}
+                    <img src="https://cdn.svgporn.com/logos/{icon}.svg" alt={name} loading="lazy" />
+                  {:else}
+                    <img src="https://cdn.simpleicons.org/{icon}" alt={name} loading="lazy" />
+                  {/if}
+                </div>
                 <span>{name}</span>
               </li>
             {/each}
@@ -34,28 +36,48 @@
 <style lang="scss">
   section {
     width: 100%;
+    color: #abb2bf;
   }
   .content {
+    display: grid;
+    grid-template-columns: auto 1fr;
+  }
+  .skill-categories {
     display: flex;
-    justify-content: space-around;
     gap: 1rem;
-
-    ul {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
-      gap: 1rem;
-      li {
-        display: grid;
-        grid-template-columns: 2rem 1fr;
-        gap: 0.5rem;
-        align-items: center;
-        img {
-          width: 2rem;
-          height: 2rem;
-          object-fit: contain;
-          object-position: center;
-        }
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    .category {
+      display: flex;
+      flex-direction: column;
+      border: 1px solid var(--color-gray);
+      width: 15rem;
+      .name {
+        padding: 0.5rem;
+        font-weight: 600;
+        color: white;
+        border-bottom: 1px solid var(--color-gray);
+      }
+      .skills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        padding: 0.5rem;
       }
     }
+  }
+  .skill {
+    .img-container {
+      width: 2rem;
+      height: 2rem;
+    }
+    img {
+      object-fit: contain;
+      width: 100%;
+      height: 100%;
+    }
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
   }
 </style>
