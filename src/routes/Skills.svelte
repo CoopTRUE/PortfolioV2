@@ -16,13 +16,11 @@
           <ul class="skills">
             {#each skills as { name, icon, svgPorn }}
               <li class="skill">
-                <div class="img-container">
-                  {#if svgPorn}
-                    <img src="https://cdn.svgporn.com/logos/{icon}.svg" alt={name} loading="lazy" />
-                  {:else}
-                    <img src="https://cdn.simpleicons.org/{icon}" alt={name} loading="lazy" />
-                  {/if}
-                </div>
+                {#if svgPorn}
+                  <img src="https://cdn.svgporn.com/logos/{icon}.svg" alt={name} loading="lazy" />
+                {:else}
+                  <img src="https://cdn.simpleicons.org/{icon}" alt={name} loading="lazy" />
+                {/if}
                 <span>{name}</span>
               </li>
             {/each}
@@ -67,14 +65,10 @@
     }
   }
   .skill {
-    .img-container {
-      width: 2rem;
-      height: 2rem;
-    }
     img {
       object-fit: contain;
-      width: 100%;
-      height: 100%;
+      width: 2rem;
+      height: 2rem;
     }
     display: flex;
     align-items: center;
