@@ -1,4 +1,5 @@
 <script>
+  import { fly } from 'svelte/transition'
   import AboutMe from './AboutMe.svelte'
   import Contact from './Contact.svelte'
   import Hero from './Hero.svelte'
@@ -16,7 +17,7 @@
   />
 </svelte:head>
 
-<main>
+<main transition:fly={{ y: 200 }}>
   <Hero />
   <Quote />
   <Projects />

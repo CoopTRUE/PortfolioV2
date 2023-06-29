@@ -16,7 +16,6 @@
     color: white;
   }
   img {
-    display: block;
     height: 1rem;
   }
 </style>

@@ -24,8 +24,10 @@
       width: 45ch;
     }
     .headshot {
-      width: min(20rem, 35%);
-      aspect-ratio: 1/1;
+      width: clamp(10rem, 40vw, 25rem);
+      height: clamp(10rem, 40vw, 25rem);
+      // make image centered
+      object-fit: contain;
     }
   }
   .title {
