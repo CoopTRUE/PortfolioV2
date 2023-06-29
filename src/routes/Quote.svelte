@@ -1,5 +1,22 @@
+<script lang="ts">
+  import { onMount } from 'svelte'
+
+  let index = 0
+  let loaded = false
+  onMount(() => {
+    loaded = true
+    const interval = setInterval(() => {
+      index++
+      if (index === quote.length) clearInterval(interval)
+    }, 80)
+    return () => clearInterval(interval)
+  })
+  const quote = 'Talk is cheap. Show me the code'
+  $: shownQuote = loaded ? quote.slice(0, index) : quote
+</script>
+
 <section>
-  <div class="quote">Talk is cheap. Show me the code</div>
+  <div class="quote">{shownQuote}<span class="underscore">_</span></div>
   <div class="author">- Linus Torvalds</div>
 </section>
 
@@ -31,6 +48,15 @@
       transform: translate(-25%, 50%);
       right: 0;
       bottom: 0;
+    }
+  }
+  .underscore {
+    margin-left: 0.2rem;
+    animation: blink 0.5s steps(1) infinite;
+    @keyframes blink {
+      50% {
+        opacity: 0;
+      }
     }
   }
   .author {

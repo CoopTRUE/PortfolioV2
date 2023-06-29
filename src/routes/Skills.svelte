@@ -1,28 +1,46 @@
 <script lang="ts">
   import skills from '$lib/data/skills'
   import dots from '$lib/svgs/skills-dots.svg'
+  import { onMount } from 'svelte'
+  import { inview } from 'svelte-inview'
+  import { fly } from 'svelte/transition'
 
   const entries = Object.entries(skills)
+
+  let visible = false
+  let loaded = false
+
+  onMount(() => {
+    loaded = true
+  })
 </script>
 
-<section>
+<section
+  use:inview={{ threshold: 0.5, unobserveOnEnter: true }}
+  on:inview_enter={() => (visible = true)}
+>
   <h2>skills</h2>
   <div class="content">
     <img src={dots} alt="" class="dots" />
     <ul class="skill-categories">
-      {#each entries as [category, skills]}
+      {#each entries as [category, skills], categoryIndex}
         <li class="category">
           <h3 class="name">{category}</h3>
           <ul class="skills">
-            {#each skills as { name, icon, svgPorn }}
-              <li class="skill">
-                {#if svgPorn}
-                  <img src="https://cdn.svgporn.com/logos/{icon}.svg" alt={name} loading="lazy" />
-                {:else}
-                  <img src="https://cdn.simpleicons.org/{icon}" alt={name} loading="lazy" />
-                {/if}
-                <span>{name}</span>
-              </li>
+            {#each skills as { name, icon, svgPorn }, skillIndex}
+              {#if !loaded || visible}
+                <li
+                  class="skill"
+                  in:fly={{ x: 20, duration: 300, delay: categoryIndex * 300 + skillIndex * 100 }}
+                >
+                  {#if svgPorn}
+                    <img src="https://cdn.svgporn.com/logos/{icon}.svg" alt={name} loading="lazy" />
+                  {:else}
+                    <img src="https://cdn.simpleicons.org/{icon}" alt={name} loading="lazy" />
+                  {/if}
+                  <span>{name}</span>
+                </li>
+              {/if}
             {/each}
           </ul>
         </li>
