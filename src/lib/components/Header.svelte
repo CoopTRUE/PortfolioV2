@@ -31,6 +31,7 @@
     display: flex;
     justify-content: space-between;
     margin-top: 2rem;
+    margin-bottom: 7.5rem;
   }
   .links {
     display: flex;
