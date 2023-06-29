@@ -1,5 +1,6 @@
 <script lang="ts">
   import { page } from '$app/stores'
+  import Logo from './Logo.svelte'
 
   const links = {
     '/': 'home',
@@ -12,9 +13,7 @@
 
 <header>
   <nav>
-    <div class="logo">
-      <p>Cooper</p>
-    </div>
+    <Logo />
     <ul class="links">
       {#each Object.entries(links) as [link, name]}
         {@const active = pathname === link}
@@ -56,10 +55,5 @@
       content: '#';
       color: var(--color-primary);
     }
-  }
-  .logo {
-    color: white;
-    font-size: 2rem;
-    font-weight: 700;
   }
 </style>
