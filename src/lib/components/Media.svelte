@@ -9,7 +9,7 @@
   }
 </script>
 
-<div class="media">
+<aside>
   <div class="line" />
   <ul class="links">
     {#each media as link}
@@ -21,10 +21,10 @@
       </li>
     {/each}
   </ul>
-</div>
+</aside>
 
 <style lang="scss">
-  .media {
+  aside {
     position: absolute;
     top: 0;
     left: 0;
