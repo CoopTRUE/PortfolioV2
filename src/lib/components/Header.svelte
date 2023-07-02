@@ -17,7 +17,7 @@
 <header>
   <nav>
     <Logo />
-    {#if innerWidth > 768}
+    {#if !innerWidth || innerWidth > 768}
       <ul class="links">
         {#each Object.entries(links) as [link, name]}
           {@const active = pathname === link}
