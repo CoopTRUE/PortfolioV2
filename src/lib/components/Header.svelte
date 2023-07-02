@@ -2,6 +2,8 @@
   import { page } from '$app/stores'
   import Logo from './Logo.svelte'
 
+  let innerWidth: number
+
   const links = {
     '/': 'home',
     '/works': 'works',
@@ -11,17 +13,23 @@
   $: ({ pathname } = $page.url)
 </script>
 
+<svelte:window bind:innerWidth />
 <header>
   <nav>
     <Logo />
-    <ul class="links">
-      {#each Object.entries(links) as [link, name]}
-        {@const active = pathname === link}
-        <li class="link" class:active>
-          <a href={link}>{name}</a>
-        </li>
-      {/each}
-    </ul>
+    {#if innerWidth > 768}
+      <ul class="links">
+        {#each Object.entries(links) as [link, name]}
+          {@const active = pathname === link}
+          <li class="link" class:active>
+            <a href={link}>{name}</a>
+          </li>
+        {/each}
+      </ul>
+    {:else}
+      <!-- burger -->
+      <svg />
+    {/if}
   </nav>
 </header>
 

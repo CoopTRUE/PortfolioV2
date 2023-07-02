@@ -6,8 +6,9 @@
   import { fly } from 'svelte/transition'
 
   const entries = Object.entries(skills)
+  // arr with length equal to the number of categories
+  const visible = Array(entries.length).fill(false)
 
-  let visible = false
   let loaded = false
 
   onMount(() => {
@@ -15,24 +16,22 @@
   })
 </script>
 
-<section
-  use:inview={{ threshold: 0.5, unobserveOnEnter: true }}
-  on:inview_enter={() => (visible = true)}
->
+<section>
   <h2>skills</h2>
   <div class="content">
     <img src={dots} alt="" class="dots" />
     <ul class="skill-categories">
       {#each entries as [category, skills], categoryIndex}
-        <li class="category">
+        <li
+          class="category"
+          use:inview={{ unobserveOnEnter: true, threshold: 0.8 }}
+          on:inview_enter={() => (visible[categoryIndex] = true)}
+        >
           <h3 class="name">{category}</h3>
           <ul class="skills">
             {#each skills as { name, icon, svgPorn }, skillIndex}
-              {#if !loaded || visible}
-                <li
-                  class="skill"
-                  in:fly={{ x: 20, duration: 300, delay: categoryIndex * 300 + skillIndex * 100 }}
-                >
+              {#if !loaded || visible[categoryIndex]}
+                <li class="skill" in:fly={{ x: 20, duration: 300, delay: 100 * skillIndex }}>
                   {#if svgPorn}
                     <img src="https://cdn.svgporn.com/logos/{icon}.svg" alt={name} loading="lazy" />
                   {:else}
@@ -57,6 +56,11 @@
   .content {
     display: grid;
     grid-template-columns: auto 1fr;
+    gap: 3rem;
+    @media (max-width: 700px) {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
   }
   .skill-categories {
     display: flex;

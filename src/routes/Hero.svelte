@@ -29,6 +29,17 @@
       // make image centered
       object-fit: contain;
     }
+    @media (max-width: 768px) {
+      flex-direction: column;
+      .text {
+        width: 100%;
+        text-align: center;
+      }
+      .headshot {
+        width: clamp(10rem, 80vw, 25rem);
+        height: clamp(10rem, 80vw, 25rem);
+      }
+    }
   }
   .title {
     font-weight: 600;
