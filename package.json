@@ -20,6 +20,7 @@
     "postcss-load-config": "^4.0.1",
     "sass": "^1.63.6",
     "svelte": "^4.0.0",
+    "svelte-hamburgers": "^4.1.0",
     "svelte-inview": "^4.0.0",
     "tslib": "^2.5.3",
     "typescript": "^5.1.3",

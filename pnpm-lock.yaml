@@ -29,6 +29,9 @@ dependencies:
   svelte:
     specifier: ^4.0.0
     version: 4.0.0
+  svelte-hamburgers:
+    specifier: ^4.1.0
+    version: 4.1.0(svelte@4.0.0)
   svelte-inview:
     specifier: ^4.0.0
     version: 4.0.0(svelte@4.0.0)
@@ -2452,6 +2455,14 @@ packages:
       postcss-scss: 4.0.6(postcss@8.4.24)
       svelte: 4.0.0
     dev: true
+
+  /svelte-hamburgers@4.1.0(svelte@4.0.0):
+    resolution: {integrity: sha512-uP3cHBhNRZDtg6PRcxaT5sOnF2o4uyHF37pqbq6ZN2zKekAHdvTn/wjiWv1arkYhnNZ+MzRgG7O/b+prN4zt5A==}
+    peerDependencies:
+      svelte: ^3.46.4 || ^4.0.0
+    dependencies:
+      svelte: 4.0.0
+    dev: false
 
   /svelte-hmr@0.15.2(svelte@4.0.0):
     resolution: {integrity: sha512-q/bAruCvFLwvNbeE1x3n37TYFb3mTBJ6TrCq6p2CoFbSTNhDE9oAtEfpy+wmc9So8AG0Tja+X0/mJzX9tSfvIg==}

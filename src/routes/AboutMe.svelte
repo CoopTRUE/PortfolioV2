@@ -17,7 +17,7 @@
     width: 100%;
   }
   p {
-    width: 55ch;
+    max-width: 55ch;
   }
   br {
     margin-bottom: 5rem;

@@ -33,6 +33,9 @@
     align-items: center;
     padding: 1.375rem;
     gap: 0.875rem;
+    @media (max-width: 1200px) {
+      display: none;
+    }
   }
   .links {
     display: flex;
@@ -42,7 +45,7 @@
   }
   .line {
     width: 0.0625rem;
-    height: 12rem;
+    height: clamp(8rem, 10vw, 12rem);
     background-color: var(--color-gray);
   }
   img {

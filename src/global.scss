@@ -11,6 +11,7 @@
 
 html {
   color-scheme: dark;
+  --overflow-y: visible;
   --color-bg: #282c33;
   --color-gray: #abb2bf;
   --color-primary: #007bff;
@@ -20,6 +21,7 @@ body {
   background: var(--color-bg);
   color: var(--color-gray);
   font-family: 'Fira Code', monospace;
+  overflow-y: var(--overflow-y);
 }
 
 img {
