@@ -37,7 +37,7 @@
     .description {
       width: 40ch;
     }
-    @media (max-width: 530px) {
+    @media (max-width: 670px) {
       flex-direction: column;
       .description {
         width: 100%;
@@ -47,7 +47,7 @@
 
   .contacts-container {
     display: inline-block;
-    overflow: scroll;
+    overflow: auto;
     .title {
       font-weight: 600;
       color: white;

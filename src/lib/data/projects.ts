@@ -24,7 +24,7 @@ const projects: Project[] = [
     title: 'Grape Casino',
     description: "Grape Finance's centralized casino running on the fantom blockchain",
     toolsUsed: ['Svelte', 'SvelteKit', 'TypeScript'],
-    link: 'https://grape-casino.com',
+    link: 'https://casino.grapefinance.app/',
     src: grapeCasino,
   },
   // {
